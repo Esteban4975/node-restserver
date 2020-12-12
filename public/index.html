@@ -6,7 +6,7 @@
     <title>Google Sign-In Demo</title>
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="913783762804-vdjit6egb4qntqutrcrb0flk1fm817km.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content=process.env.CLIENT_ID>
 </head>
 <body>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
