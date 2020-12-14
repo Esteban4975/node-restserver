@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 
 let verificaToken = (req,res,next) => {
     let token = req.get('token');
+    //console.log("ok categoria");
     jwt.verify(token,process.env.SEED,(err,decode)=>{
         if(err){
             return res.status(401).json({
