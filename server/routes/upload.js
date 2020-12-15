@@ -114,12 +114,6 @@ function imagenUsuario(id,res,nombreArchivo){
     });
 }
 
-function borraArchivo(nombreImagen,tipo){
-    let pathImagen = path.resolve(__dirname,`../../uploads/${tipo}/${nombreImagen}`);
-    if(fs.existsSync(pathImagen)){
-        fs.unlinkSync(pathImagen);
-    }
-}
 
 function imagenProducto(id,res,nombreArchivo){
     Producto.findById(id,(err,productoDB)=>{
@@ -152,6 +146,13 @@ function imagenProducto(id,res,nombreArchivo){
             });
         });
     });
+}
+
+function borraArchivo(nombreImagen,tipo){
+    let pathImagen = path.resolve(__dirname,`../../uploads/${tipo}/${nombreImagen}`);
+    if(fs.existsSync(pathImagen)){
+        fs.unlinkSync(pathImagen);
+    }
 }
 
 module.exports = app;
