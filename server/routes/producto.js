@@ -112,7 +112,8 @@ app.post('/productos',verificaToken,(req,res)=>{
         precioUni: body.precioUni,
         descripcion: body.descripcion,
         disponible: body.disponible,
-        categoria: body.categoria
+        categoria: body.categoria,
+        img: body.img
     });
     producto.save((err,productoDB)=>{
         if(err){
